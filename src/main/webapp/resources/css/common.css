@@ -11,8 +11,10 @@ html, body {
 	display: grid;
 	width: 100%;
 	height: 100%;
-	grid-template-areas: " nav nav" " container container" " footer footer";
+	grid-template-areas: " nav nav " " container container "
+		" footer footer ";
 	grid-template-rows: 2fr 20fr 1fr;
+	grid-template-columns: 1fr;
 	border: 1px solid black;
 }
 
@@ -115,10 +117,6 @@ html, body {
 	font-weight: bold;
 }
 
-.delimiter {
-	color: grey;
-}
-
 .err {
 	color: #ff6f69;
 	text-align: center;
@@ -129,4 +127,38 @@ html, body {
 .msg {
 	text-align: center;
 	font-weight: bolder;
+}
+
+.mainMenu{
+	display: flex;
+    height: 100%;
+}
+
+.leftMenu{
+	display: flex;
+    flex-grow: 5;
+    height: 100%;
+}
+
+.rightMenu{
+	display: flex;
+    flex-grow: 1;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.rightMenu div{
+	margin: 1em;
+}
+
+.rightMenu a{
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.rightMenu a:hover{
+	color:blue;
 }

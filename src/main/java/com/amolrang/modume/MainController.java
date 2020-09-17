@@ -32,12 +32,4 @@ public class MainController {
 		model.addAttribute("bottomView",menu.bottomView(model));
 		return "viewer/default";
 	}
-	
-	@RequestMapping
-	public String default_Error_Page(Model model) {
-		model.addAttribute("err_type","404");
-		model.addAttribute("err_msg","페이지를 찾을 수 없습니다.");
-		model.addAttribute("err_des","경로를 다시 확인해 주세요");
-		return "error/error";
-	}
 }

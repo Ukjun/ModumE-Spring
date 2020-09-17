@@ -6,7 +6,7 @@
 		<div><a href="/">Main</a></div>
 		<div><a href="/board/stream">Stream</a></div>
 		<div><a href="/board/search">Search</a></div>
-		<div><a href="/board/my">My</a></div>
-		<div><a href="/user/login">Sign In</a></div>
+		<div><a href="/user/info">My info</a></div>
+		<div><a href="/user/login">login</a></div>
 	</div>
 </div>

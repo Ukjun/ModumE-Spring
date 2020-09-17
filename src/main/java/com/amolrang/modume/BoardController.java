@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class BoardController {
 	public String mainView( Model model) {
-		model.addAttribute("title","메인 뷰");
+		model.addAttribute("title","main view");
 		return "main/main";
 	}
 	
 	@RequestMapping(value = "/board/stream", method = RequestMethod.GET)
 	public String boardStream(Model model) {
-		model.addAttribute("title","stream 뷰");
+		model.addAttribute("title","stream view");
 		MenuController menu = new MenuController();
 		model.addAttribute("topView",menu.topView(model));
 		model.addAttribute("view","/board/Current_Live");
@@ -25,7 +25,7 @@ public class BoardController {
 	}
 	@RequestMapping(value = "/board/search", method = RequestMethod.GET)
 	public String boardSearch(Model model) {
-		model.addAttribute("title","search 뷰");
+		model.addAttribute("title","search view");
 		MenuController menu = new MenuController();
 		model.addAttribute("topView",menu.topView(model));
 		model.addAttribute("view","/board/Stream_search");
