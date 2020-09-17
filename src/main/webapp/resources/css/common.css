@@ -11,20 +11,14 @@ html, body {
 	display: grid;
 	width: 100%;
 	height: 100%;
-	grid-template-areas: " nav nav" " menubar container" " footer footer";
+	grid-template-areas: " nav nav" " container container" " footer footer";
 	grid-template-rows: 2fr 20fr 1fr;
-	grid-template-columns: 1fr 5fr;
 	border: 1px solid black;
 }
 
 #header {
 	grid-area: nav;
 	background: red;
-}
-
-#menubar {
-	grid-area: menubar;
-	background: blue;
 }
 
 #footer {

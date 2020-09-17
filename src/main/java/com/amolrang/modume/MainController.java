@@ -23,10 +23,13 @@ public class MainController {
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String mainView(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+		logger.info("Welcome MainView! The client locale is {}.", locale);
 		
 		BoardController bc = new BoardController();
-		model.addAttribute("view",bc.mainView(locale, model));
+		MenuController menu = new MenuController();
+		model.addAttribute("topView",menu.topView(model));
+		model.addAttribute("view",bc.mainView(model));
+		model.addAttribute("bottomView",menu.bottomView(model));
 		return "viewer/default";
 	}
 	
