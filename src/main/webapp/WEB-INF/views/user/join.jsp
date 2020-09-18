@@ -44,9 +44,9 @@ function chkId(){
 			}
 	}).then(function(res){
 		console.log(res)
-		if(res.data.result == 2){
+		if(res.data.result == 3){
 			idChkResult.innerText = '이미 사용중인 아이디입니다.'
-		}else if (res.data.result == 0){
+		}else{
 			idChkResult.innerText = '사용가능한 아이디입니다.'
 		}
 	});

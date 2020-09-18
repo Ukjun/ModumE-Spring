@@ -53,6 +53,6 @@ public class UserController {
 	public String chkId(UserDTO param) {
 		param.setUser_pw("");		
 		int result = service.login(param);
-		return String.format("ajax:{\"result\": %s}", result);
+		return String.format("{\"result\": %s}", result);
 	}
 }
