@@ -1,8 +1,10 @@
-package com.amolrang.modume;
+package com.amolrang.modume.menu;
 
+import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
-public class MenuController {
+@Service
+public class MenuService {
 
 	public Object topView(Model model) {
 		return "menu/topMenu";
