@@ -4,7 +4,9 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
-	<typeAliases>
-	
+	<typeAliases>	
+		<typeAlias type="com.amolrang.modume.user.model.UserVO" alias="UserVO"/>
+		<typeAlias type="com.amolrang.modume.user.model.UserDMI" alias="UserDMI"/>
+		<typeAlias type="com.amolrang.modume.user.model.UserDTO" alias="UserDTO"/>
 	</typeAliases>
 </configuration>

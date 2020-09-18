@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.amolrang.modume.ViewRef;
 import com.amolrang.modume.menu.MenuService;
-import com.amolrang.modume.user.model.UserVO;
+import com.amolrang.modume.user.model.UserDTO;
+import com.google.api.client.json.Json;
 
 @Controller
+@RequestMapping("/user")
 public class UserController {
 	
 	@Autowired
@@ -19,7 +21,7 @@ public class UserController {
 	@Autowired
 	private UserService service;
 	
-	@RequestMapping(value = "/user/info", method = RequestMethod.GET)
+	@RequestMapping(value = "/info", method = RequestMethod.GET)
 	public String Info(Model model) {
 		model.addAttribute("title","my view");
 		model.addAttribute("topView",menu.topView(model));
@@ -28,7 +30,7 @@ public class UserController {
 		return ViewRef.VIEWER_DEFAULT;
 	}
 	
-	@RequestMapping(value = "/user/login", method = RequestMethod.GET)
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(Model model) {
 		model.addAttribute("title","login view");
 		model.addAttribute("topView",menu.topView(model));
@@ -37,7 +39,7 @@ public class UserController {
 		return ViewRef.VIEWER_DEFAULT;
 	}
 	
-	@RequestMapping(value = "/user/join", method = RequestMethod.GET)
+	@RequestMapping(value = "/join", method = RequestMethod.GET)
 	public String join(Model model) {
 		model.addAttribute("title","login view");
 		model.addAttribute("topView",menu.topView(model));
@@ -47,11 +49,10 @@ public class UserController {
 	}
 	
 	@ResponseBody
-	@RequestMapping("chkId")
-	public String chkId(UserVO param) {
+	@RequestMapping("/chkId")
+	public String chkId(UserDTO param) {
 		param.setUser_pw("");		
 		int result = service.login(param);
-		
 		return String.format("ajax:{\"result\": %s}", result);
 	}
 }

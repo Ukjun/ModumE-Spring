@@ -9,13 +9,14 @@ import com.amolrang.modume.ViewRef;
 import com.amolrang.modume.menu.MenuService;
 
 @Controller
+@RequestMapping("/board")
 public class BoardController {
 	public String mainView( Model model) {
 		model.addAttribute("title","main view");
 		return "main/main";
 	}
 	
-	@RequestMapping(value = "/board/stream", method = RequestMethod.GET)
+	@RequestMapping(value = "/stream", method = RequestMethod.GET)
 	public String boardStream(Model model) {
 		model.addAttribute("title","stream view");
 		MenuService menu = new MenuService();
@@ -24,7 +25,7 @@ public class BoardController {
 		model.addAttribute("bottomView",menu.bottomView(model));
 		return ViewRef.VIEWER_DEFAULT;
 	}
-	@RequestMapping(value = "/board/search", method = RequestMethod.GET)
+	@RequestMapping(value = "/search", method = RequestMethod.GET)
 	public String boardSearch(Model model) {
 		model.addAttribute("title","search view");
 		MenuService menu = new MenuService();

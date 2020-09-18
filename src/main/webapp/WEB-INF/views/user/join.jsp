@@ -3,7 +3,7 @@
 <div id="sectionContainerCenter">
 	<div>
 		<div class="err">${Err}</div>
-		<form class="frm" id="frm" action="${pageContext.request.contextPath}/user/joinProc" method="post" onsubmit="return chk()">
+		<form class="frm" id="frm" action="${pageContext.request.contextPath}/user/join" method="post" onsubmit="return chk()">
 		<div id="idChkResult" class="msg"></div>
 			<div>
 				<label>아이디</label><input type="text" name="user_id" placeholder="아이디" value="${tempData.getUser_id()}" required>
