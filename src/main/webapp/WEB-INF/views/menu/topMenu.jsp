@@ -3,10 +3,10 @@
 <div class="mainMenu">
 	<div class="leftMenu"></div>
 	<div class="rightMenu">
-		<div><a href="/">Main</a></div>
-		<div><a href="/board/stream">Stream</a></div>
-		<div><a href="/board/search">Search</a></div>
-		<div><a href="/user/info">My info</a></div>
-		<div><a href="/user/login">login</a></div>
+		<div><a href="${pageContext.request.contextPath}/">Main</a></div>
+		<div><a href="${pageContext.request.contextPath}/board/stream">Stream</a></div>
+		<div><a href="${pageContext.request.contextPath}/board/search">Search</a></div>
+		<div><a href="${pageContext.request.contextPath}/user/info">My info</a></div>
+		<div><a href="${pageContext.request.contextPath}/user/login">login</a></div>
 	</div>
 </div>

@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>${title}</title>
 </head>
 <body>
-
+<div>내정보</div>
 </body>
 </html>
