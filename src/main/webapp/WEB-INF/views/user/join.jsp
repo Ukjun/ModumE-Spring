@@ -38,7 +38,7 @@ function chkId(){
 		return;
 	}
 	
-	axios.get('${pageContext.request.contextPath}/user/chkIdProc',{
+	axios.get('${pageContext.request.contextPath}/user/chkId',{
 		params:{
 			user_id
 			}
