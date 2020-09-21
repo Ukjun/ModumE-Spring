@@ -62,6 +62,12 @@ public class UserController {
 		return "redirect:/user/login";
 	}
 	
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+	public String _logout(Model model,HttpSession hs) {
+		hs.invalidate();
+		return "redirect:/";
+	}
+	
 	@RequestMapping(value = "/join", method = RequestMethod.GET)
 	public String _join(Model model) {
 		model.addAttribute("title","login view");

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div id="sectionContainerCenter">
 	<div>
-		<div class="err">${Err}</div>
+		<div class="err">${data.msg}</div>
 		<form class="frm" id="frm" action="${pageContext.request.contextPath}/user/login" method="post">
 			<div>
 				<label>아이디</label><input type="text" name="user_id" placeholder="아이디" required>
