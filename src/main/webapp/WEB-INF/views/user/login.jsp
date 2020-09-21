@@ -2,7 +2,7 @@
 <div id="sectionContainerCenter">
 	<div>
 		<div class="err">${Err}</div>
-		<form class="frm" id="frm" action="${pageContext.request.contextPath}/user/loginProc" method="post">
+		<form class="frm" id="frm" action="${pageContext.request.contextPath}/user/login" method="post">
 			<div>
 				<label>아이디</label><input type="text" name="user_id" placeholder="아이디" required>
 			</div>

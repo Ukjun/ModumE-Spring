@@ -7,6 +7,6 @@
 	<typeAliases>	
 		<typeAlias type="com.amolrang.modume.user.model.UserVO" alias="UserVO"/>
 		<typeAlias type="com.amolrang.modume.user.model.UserDMI" alias="UserDMI"/>
-		<typeAlias type="com.amolrang.modume.user.model.UserDTO" alias="UserDTO"/>
+		<typeAlias type="com.amolrang.modume.user.model.UserParam" alias="UserParam"/>
 	</typeAliases>
 </configuration>
