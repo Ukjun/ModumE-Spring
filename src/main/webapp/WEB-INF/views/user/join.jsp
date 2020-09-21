@@ -38,16 +38,11 @@ function chkId(){
 		return;
 	}
 	
-	axios.get('${pageContext.request.contextPath}/user/chkId',{
-		params:{
-			user_id
-			}
-	}).then(function(res){
-		console.log(res)
-		if(res.data.result == 3){
-			idChkResult.innerText = '이미 사용중인 아이디입니다.'
-		}else{
-			idChkResult.innerText = '사용가능한 아이디입니다.'
+	axios.post('${pageContext.request.contextPath}/user/chkId',{user_id}).then(function(res){
+		if(res.data == '2') { //아이디 없음
+			idChkResult.innerText = '사용할 수 있는 아이디입니다.'
+		} else if(res.data == '3') { //아이디 중복됨
+			idChkResult.innerText = '이미 사용중입니다.'
 		}
 	});
 }

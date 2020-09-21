@@ -5,6 +5,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -77,11 +78,10 @@ public class UserController {
 		return ViewRef.VIEWER_DEFAULT;
 	}
 	
+	@RequestMapping(value = "/chkId", method = RequestMethod.POST)
 	@ResponseBody
-	@RequestMapping("/chkId")
-	public String _chkId(UserParam param) {
-		param.setUser_pw("");		
+	public String _chkId(@RequestBody UserParam param) {
 		int result = service.login(param);
-		return String.format("{\"result\": %s}", result);
+		return String.valueOf(result);
 	}
 }
