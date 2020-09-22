@@ -29,6 +29,7 @@ public class MainController {
 		MenuService menu = new MenuService();
 		model.addAttribute("topView",menu.topView(model));
 		model.addAttribute("view",bc.mainView(model));
+		model.addAttribute("discord","discord/discord");
 		model.addAttribute("bottomView",menu.bottomView(model));
 		return ViewRef.VIEWER_DEFAULT;
 	}

@@ -30,6 +30,7 @@ public class UserController {
 		model.addAttribute("title","my view");
 		model.addAttribute("topView",menu.topView(model));
 		model.addAttribute("view","/user/info");
+		model.addAttribute("discord","discord/discord");
 		model.addAttribute("bottomView",menu.bottomView(model));
 		return ViewRef.VIEWER_DEFAULT;
 	}
@@ -39,6 +40,7 @@ public class UserController {
 		model.addAttribute("title","login view");
 		model.addAttribute("topView",menu.topView(model));
 		model.addAttribute("view","/user/login");
+		model.addAttribute("discord","discord/discord");
 		model.addAttribute("bottomView",menu.bottomView(model));
 		return ViewRef.VIEWER_DEFAULT;
 	}
@@ -74,6 +76,7 @@ public class UserController {
 		model.addAttribute("title","login view");
 		model.addAttribute("topView",menu.topView(model));
 		model.addAttribute("view","/user/join");
+		model.addAttribute("discord","discord/discord");
 		model.addAttribute("bottomView",menu.bottomView(model));
 		return ViewRef.VIEWER_DEFAULT;
 	}

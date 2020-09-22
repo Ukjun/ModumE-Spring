@@ -22,6 +22,7 @@ public class BoardController {
 		MenuService menu = new MenuService();
 		model.addAttribute("topView",menu.topView(model));
 		model.addAttribute("view","/board/Current_Live");
+		model.addAttribute("discord","discord/discord");
 		model.addAttribute("bottomView",menu.bottomView(model));
 		return ViewRef.VIEWER_DEFAULT;
 	}
@@ -31,6 +32,7 @@ public class BoardController {
 		MenuService menu = new MenuService();
 		model.addAttribute("topView",menu.topView(model));
 		model.addAttribute("view","/board/Stream_search");
+		model.addAttribute("discord","discord/discord");
 		model.addAttribute("bottomView",menu.bottomView(model));
 		return ViewRef.VIEWER_DEFAULT;
 	}
