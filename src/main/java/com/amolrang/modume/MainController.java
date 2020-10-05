@@ -4,6 +4,7 @@ import java.util.Locale;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +19,10 @@ import com.amolrang.modume.menu.MenuService;
  */
 @Controller
 public class MainController {
+	@Autowired
+	BoardController bc;
+	@Autowired
+	MenuService menu;
 	
 	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 	
@@ -25,8 +30,6 @@ public class MainController {
 	public String mainView(Locale locale, Model model) {
 		logger.info("Welcome MainView! The client locale is {}.", locale);
 		
-		BoardController bc = new BoardController();
-		MenuService menu = new MenuService();
 		model.addAttribute("topView",menu.topView(model));
 		model.addAttribute("view",bc.mainView(model));
 		model.addAttribute("discord","discord/discord");

@@ -97,19 +97,11 @@
 		</dependency>
 
 		<!-- Servlet -->
-		<!-- <dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.5</version>
-			<scope>provided</scope>
-		</dependency> -->
-		<!-- <dependency>
-			<groupId>javax.servlet.jsp</groupId>
-			<artifactId>jsp-api</artifactId>
-			<version>2.1</version>
-			<scope>provided</scope>
-		</dependency> -->
-		
+		<!-- <dependency> <groupId>javax.servlet</groupId> <artifactId>servlet-api</artifactId> <version>2.5</version> 
+			<scope>provided</scope> </dependency> -->
+		<!-- <dependency> <groupId>javax.servlet.jsp</groupId> <artifactId>jsp-api</artifactId> <version>2.1</version> 
+			<scope>provided</scope> </dependency> -->
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -121,13 +113,13 @@
 			<artifactId>javax.servlet.jsp-api</artifactId>
 			<version>2.3.3</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-		
+
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -182,7 +174,7 @@
 		<dependency>
 			<groupId>net.dv8tion</groupId>
 			<artifactId>JDA</artifactId>
-			<version>4.2.0_204</version>
+			<version>4.2.0_208</version>
 		</dependency>
 
 		<dependency>
@@ -238,6 +230,18 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.21</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.socket/socket.io-client -->
+		<dependency>
+			<groupId>io.socket</groupId>
+			<artifactId>socket.io-client</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-websocket -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-websocket</artifactId>
+			<version>2.3.4.RELEASE</version>
 		</dependency>
 
 	</dependencies>
