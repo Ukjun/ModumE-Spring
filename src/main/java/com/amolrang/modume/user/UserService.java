@@ -1,6 +1,9 @@
 package com.amolrang.modume.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.amolrang.modume.models.UserDMI;
@@ -9,11 +12,11 @@ import com.amolrang.modume.utils.Const;
 import com.amolrang.modume.utils.SecurityUtils;
 
 @Service
-public class UserService {
+public class UserService{
 
 	@Autowired
 	private UserMapper mapper;
-
+	
 	public int login(UserParam param) {
 		if(param.getUser_id().equals("")) {return Const.NO_ID;}
 		UserDMI dbUser = mapper.selUser(param);
@@ -41,5 +44,4 @@ public class UserService {
 
 		return mapper.insUser(param);
 	}
-
 }

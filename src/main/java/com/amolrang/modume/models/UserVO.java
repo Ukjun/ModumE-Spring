@@ -1,12 +1,6 @@
 package com.amolrang.modume.models;
 
-import java.util.Collection;
-
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.User;
-
-public class UserVO extends User{
-	
+public class UserVO{
 	private int i_user;
 	private String user_id;
 	private String user_pw;
