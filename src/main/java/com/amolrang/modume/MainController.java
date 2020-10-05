@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.amolrang.modume.board.BoardController;
-import com.amolrang.modume.menu.MenuService;
+import com.amolrang.modume.board.MenuService;
+import com.amolrang.modume.utils.ViewRef;
 
 /**
  * Handles requests for the application home page.

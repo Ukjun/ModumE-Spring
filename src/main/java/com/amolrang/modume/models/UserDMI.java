@@ -1,4 +1,4 @@
-package com.amolrang.modume.user.model;
+package com.amolrang.modume.models;
 
 public class UserDMI extends UserVO{
 

@@ -1,4 +1,4 @@
-package com.amolrang.modume;
+package com.amolrang.modume.utils;
 
 public class ViewRef {
 	public static final String URI_USER = "user";

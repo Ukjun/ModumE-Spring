@@ -1,4 +1,4 @@
-package com.amolrang.modume;
+package com.amolrang.modume.utils;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;

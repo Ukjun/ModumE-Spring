@@ -3,10 +3,10 @@ package com.amolrang.modume.user;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.amolrang.modume.Const;
-import com.amolrang.modume.SecurityUtils;
-import com.amolrang.modume.user.model.UserDMI;
-import com.amolrang.modume.user.model.UserParam;
+import com.amolrang.modume.models.UserDMI;
+import com.amolrang.modume.models.UserParam;
+import com.amolrang.modume.utils.Const;
+import com.amolrang.modume.utils.SecurityUtils;
 
 @Service
 public class UserService {

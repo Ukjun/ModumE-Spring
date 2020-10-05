@@ -1,4 +1,4 @@
-package com.amolrang.modume;
+package com.amolrang.modume.utils;
 
 public class Const {
 	public static final String TEMPLATE = "template";

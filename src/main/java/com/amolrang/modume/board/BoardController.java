@@ -5,8 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.amolrang.modume.ViewRef;
-import com.amolrang.modume.menu.MenuService;
+import com.amolrang.modume.utils.ViewRef;
 
 @Controller
 @RequestMapping("/board")

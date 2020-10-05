@@ -1,11 +1,11 @@
-package com.amolrang.modume;
+package com.amolrang.modume.utils;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.mindrot.jbcrypt.BCrypt;
 
-import com.amolrang.modume.user.model.UserVO;
+import com.amolrang.modume.models.UserVO;
 
 public class SecurityUtils {
 

@@ -1,4 +1,4 @@
-package com.amolrang.modume.menu;
+package com.amolrang.modume.board;
 
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;

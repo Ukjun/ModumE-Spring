@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.amolrang.modume.Const;
-import com.amolrang.modume.ViewRef;
-import com.amolrang.modume.menu.MenuService;
-import com.amolrang.modume.user.model.UserParam;
+import com.amolrang.modume.board.MenuService;
+import com.amolrang.modume.models.UserParam;
+import com.amolrang.modume.utils.Const;
+import com.amolrang.modume.utils.ViewRef;
 
 @Controller
 @RequestMapping("/user")

@@ -13,6 +13,8 @@
 		<org.springframework-version>5.2.9.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.9.6</org.aspectj-version>
 		<org.slf4j-version>1.7.30</org.slf4j-version>
+		<security.version>5.4.0</security.version>
+
 	</properties>
 	<dependencies>
 		<!-- Spring -->
@@ -97,10 +99,10 @@
 		</dependency>
 
 		<!-- Servlet -->
-		<!-- <dependency> <groupId>javax.servlet</groupId> <artifactId>servlet-api</artifactId> <version>2.5</version> 
-			<scope>provided</scope> </dependency> -->
-		<!-- <dependency> <groupId>javax.servlet.jsp</groupId> <artifactId>jsp-api</artifactId> <version>2.1</version> 
-			<scope>provided</scope> </dependency> -->
+		<!-- <dependency> <groupId>javax.servlet</groupId> <artifactId>servlet-api</artifactId> 
+			<version>2.5</version> <scope>provided</scope> </dependency> -->
+		<!-- <dependency> <groupId>javax.servlet.jsp</groupId> <artifactId>jsp-api</artifactId> 
+			<version>2.1</version> <scope>provided</scope> </dependency> -->
 
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -231,19 +233,34 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.21</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.socket/socket.io-client -->
+		
+		<!-- Security -->
 		<dependency>
-			<groupId>io.socket</groupId>
-			<artifactId>socket.io-client</artifactId>
-			<version>1.0.0</version>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${security.version}</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-websocket -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-websocket</artifactId>
-			<version>2.3.4.RELEASE</version>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${security.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<version>${security.version}</version>
+		</dependency>
+		
 	</dependencies>
 
 	<repositories>

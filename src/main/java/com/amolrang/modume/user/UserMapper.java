@@ -2,9 +2,9 @@ package com.amolrang.modume.user;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import com.amolrang.modume.user.model.UserDMI;
-import com.amolrang.modume.user.model.UserParam;
-import com.amolrang.modume.user.model.UserVO;
+import com.amolrang.modume.models.UserDMI;
+import com.amolrang.modume.models.UserParam;
+import com.amolrang.modume.models.UserVO;
 
 @Mapper
 public interface UserMapper {
