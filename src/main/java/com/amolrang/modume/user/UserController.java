@@ -1,7 +1,5 @@
 package com.amolrang.modume.user;
 
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,81 +7,33 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.amolrang.modume.board.MenuService;
-import com.amolrang.modume.models.UserParam;
-import com.amolrang.modume.utils.Const;
-import com.amolrang.modume.utils.ViewRef;
+import com.amolrang.modume.user.model.UserDMI;
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping(value = "/user", method = RequestMethod.GET)
 public class UserController {
-	
-	@Autowired
-	private MenuService menu;
 	@Autowired
 	private UserService service;
 	
-	@RequestMapping(value = "/info", method = RequestMethod.GET)
-	public String _Info(Model model) {
-		model.addAttribute("title","my view");
-		model.addAttribute("topView",menu.topView(model));
-		model.addAttribute("view","/user/info");
-		model.addAttribute("discord","discord/discord");
-		model.addAttribute("bottomView",menu.bottomView(model));
-		return ViewRef.VIEWER_DEFAULT;
-	}
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String _login(Model model) {
-		model.addAttribute("title","login view");
-		model.addAttribute("topView",menu.topView(model));
-		model.addAttribute("view","/user/login");
-		model.addAttribute("discord","discord/discord");
-		model.addAttribute("bottomView",menu.bottomView(model));
-		return ViewRef.VIEWER_DEFAULT;
-	}
-	
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String _login(UserParam param,HttpSession hs, RedirectAttributes ra) {
-		int result = service.login(param);
-		if (result == Const.SUCCESS) {
-			hs.setAttribute(Const.LOGIN_USER, param);
-			return "redirect:/";
-		}
-		String msg = null;
-		if(result == Const.NO_ID) {
-			msg = "아이디를 확인해주세요.";
-		}else if(result == Const.NG_PW) {
-			msg = "비밀번호를 확인해주세요";
-		}
-		
-		param.setMsg(msg);
-		ra.addFlashAttribute("data",param);
-		
-		return "redirect:/user/login";
-	}
-	
-	@RequestMapping(value = "/logout", method = RequestMethod.GET)
-	public String _logout(Model model,HttpSession hs) {
-		hs.invalidate();
-		return "redirect:/";
+	public String login(Model model) {
+		model.addAttribute("viewPort", "user/login");
+		model.addAttribute("board", "discord/discord");
+		return "viewer/default";
 	}
 	
 	@RequestMapping(value = "/join", method = RequestMethod.GET)
-	public String _join(Model model) {
-		model.addAttribute("title","login view");
-		model.addAttribute("topView",menu.topView(model));
-		model.addAttribute("view","/user/join");
-		model.addAttribute("discord","discord/discord");
-		model.addAttribute("bottomView",menu.bottomView(model));
-		return ViewRef.VIEWER_DEFAULT;
+	public String join(Model model) {
+		model.addAttribute("viewPort", "user/join");
+		model.addAttribute("board", "discord/discord");
+		return "viewer/default";
 	}
 	
-	@RequestMapping(value = "/chkId", method = RequestMethod.POST)
+	@RequestMapping(value = "/ajaxIdChk", method = RequestMethod.POST)
 	@ResponseBody
-	public String _chkId(@RequestBody UserParam param) {
+	public String ajaxIdChk(@RequestBody UserDMI param) {
 		int result = service.login(param);
 		return String.valueOf(result);
 	}

@@ -1,13 +1,14 @@
 package com.amolrang.modume.user;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 
-import com.amolrang.modume.models.UserDMI;
-import com.amolrang.modume.models.UserParam;
-import com.amolrang.modume.models.UserVO;
+import com.amolrang.modume.user.model.UserDMI;
+
 
 @Mapper
 public interface UserMapper {
-	public int insUser(UserParam p);
-	public UserDMI selUser(UserParam param);
+	public int insUser(UserDMI param);
+	public UserDMI selUser(UserDMI param);
 }

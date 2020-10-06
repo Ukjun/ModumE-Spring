@@ -11,18 +11,18 @@
 <body>
 	<div id="containerGird">
 		<header id="header">
-			<jsp:include page="/WEB-INF/views/${topView}.jsp"></jsp:include>
+			<jsp:include page="/WEB-INF/views/menu/topMenu.jsp"></jsp:include>
 		</header>
 		<div id="container">
 			<section id="main_container">
-				<jsp:include page="/WEB-INF/views/${view}.jsp"></jsp:include>
+				<jsp:include page="/WEB-INF/views/${viewPort}.jsp"></jsp:include>
 			</section>
 			<section id="right_container">
-				<jsp:include page="/WEB-INF/views/${discord}.jsp"></jsp:include>
+				<jsp:include page="/WEB-INF/views/${board}.jsp"></jsp:include>
 			</section>
 		</div>
 		<footer id="footer">
-			<jsp:include page="/WEB-INF/views/${bottomView}.jsp"></jsp:include>
+			<jsp:include page="/WEB-INF/views/menu/bottomMenu.jsp"></jsp:include>
 		</footer>
 	</div>
 </body>

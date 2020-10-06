@@ -1,47 +1,18 @@
 package com.amolrang.modume.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.amolrang.modume.models.UserDMI;
-import com.amolrang.modume.models.UserParam;
-import com.amolrang.modume.utils.Const;
-import com.amolrang.modume.utils.SecurityUtils;
+import com.amolrang.modume.user.model.UserDMI;
 
 @Service
-public class UserService{
-
+public class UserService {
 	@Autowired
 	private UserMapper mapper;
-	
-	public int login(UserParam param) {
-		if(param.getUser_id().equals("")) {return Const.NO_ID;}
-		UserDMI dbUser = mapper.selUser(param);
-		if (dbUser == null) {return Const.NO_ID;}
-		
-		String salt = dbUser.getSalt();
-		String encryptPw = SecurityUtils.getEncrypt(param.getUser_pw(), salt);
 
-		if (!encryptPw.equals(dbUser.getUser_pw())) {return Const.NG_PW;}
+	public int login(UserDMI param) {
 		
-		param.setUser_pw(null);
-		param.setNm(dbUser.getNm());
-		param.setProfile_img(dbUser.getProfile_img());
-		return Const.SUCCESS;
+		return 0;
 	}
 
-
-	public int join(UserParam param) {
-		String pw = param.getUser_pw();
-		String salt = SecurityUtils.generateSalt();
-		String encryptPw = SecurityUtils.getEncrypt(pw, salt);
-
-		param.setUser_pw(encryptPw);
-		param.setSalt(salt);
-
-		return mapper.insUser(param);
-	}
 }
